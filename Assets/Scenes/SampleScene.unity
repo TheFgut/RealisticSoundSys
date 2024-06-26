@@ -436,19 +436,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frames:
   - _positions:
-    - {x: 1.9, y: 0, z: 0}
-    - {x: 1.9, y: 4.85, z: 0}
-    - {x: -3.33, y: 4.85, z: 0}
-    - {x: -3.17, y: 0.29, z: 0}
+    - {x: -0.49374014, y: 1, z: 0.17350507}
+    - {x: 0.50625974, y: 1, z: 0.17350507}
+    - {x: 0.50625974, y: 0, z: 0.17350507}
+    - {x: -0.49374014, y: 1, z: 0.17350507}
     _connections:
     - _positions: []
       _connections: []
-  - _positions:
-    - {x: 1.9, y: 0, z: 6.61}
-    - {x: 1.9, y: 4.85, z: 6.04}
-    - {x: -3.33, y: 4.85, z: 5.67}
-    - {x: -3.17, y: 0.29, z: 6.41}
-    _connections: []
 --- !u!4 &1416292245
 Transform:
   m_ObjectHideFlags: 0

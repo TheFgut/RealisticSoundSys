@@ -5,6 +5,8 @@ using UnityEngine;
 public class FieldSystem : MonoBehaviour
 {
     [SerializeField] private Frame[] frames;
+
+    public Frame[] Frames => frames;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +62,8 @@ public class FieldSystem : MonoBehaviour
         [SerializeField] private List<Frame> _connections = new List<Frame>();
         public Frame[] connections => _connections.ToArray();
         public Vector3[] positions => _positions;
+
+        private Vector3 _center;
         public Vector3 center
         {
             get
@@ -71,6 +75,14 @@ public class FieldSystem : MonoBehaviour
                     sum += pos;
                 }
                 return sum / _positions.Length;
+            }
+            set
+            {
+                Vector3 dif = value - center;
+                for(int i = 0; i < positions.Length; i++)
+                {
+                    positions[i] += dif;
+                }
             }
         }
 

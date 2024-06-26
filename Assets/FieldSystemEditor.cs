@@ -34,11 +34,14 @@ public class FieldSystemEditor : EditorWindow
     private void OnSceneGUI(SceneView sceneView)
     {
         Handles.color = Color.red;
-        for (int i = 0; i < points.Length;i++)
+        if (_fieldSystem != null)
         {
-            points[i] = Handles.PositionHandle(points[i], Quaternion.identity);
-            Handles.Label(points[i], string.Format("Point{0}",i));
-
+            FieldSystem.Frame[] frames = _fieldSystem.Frames;
+            foreach (FieldSystem.Frame frame in frames)
+            {
+                frame.center = Handles.PositionHandle(frame.center, Quaternion.identity);
+                Handles.Label(frame.center, "Frame");
+            }
         }
         SceneView.RepaintAll();
     }
